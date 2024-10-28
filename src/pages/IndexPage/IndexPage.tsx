@@ -4,13 +4,14 @@ import type { FC } from 'react';
 import { Link } from '@/components/Link/Link.tsx';
 
 import tonSvg from './ton.svg';
+import iconBot from './bot-image.jpg'
 
 export const IndexPage: FC = () => {
   return (
     <List>
       <Section
         header='Features'
-        footer='You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects'
+        footer='Это раздел Web shopper'
       >
         <Link to='/ton-connect'>
           <Cell
@@ -18,6 +19,14 @@ export const IndexPage: FC = () => {
             subtitle='Connect your TON wallet'
           >
             TON Connect
+          </Cell>
+        </Link>
+        <Link to='/goods'>
+          <Cell
+            before={<Image src={iconBot} style={{ backgroundColor: '#007AFF' }}/>}
+            subtitle='5 товаров'
+          >
+            Товары за опыт
           </Cell>
         </Link>
       </Section>
