@@ -1,32 +1,45 @@
-import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
-import type { FC } from 'react';
+import {Section, Cell, List, Card} from '@telegram-apps/telegram-ui';
+import {FC, Fragment} from 'react';
 
 import { Link } from '@/components/Link/Link.tsx';
-
-import tonSvg from './ton.svg';
-import iconBot from './bot-image.jpg'
+import {CardChip} from "@telegram-apps/telegram-ui/dist/components/Blocks/Card/components/CardChip/CardChip";
+import {CardCell} from "@telegram-apps/telegram-ui/dist/components/Blocks/Card/components/CardCell/CardCell";
 
 export const IndexPage: FC = () => {
   return (
     <List>
       <Section
-        header='Features'
+        header='Товары'
         footer='Это раздел Web shopper'
       >
-        <Link to='/ton-connect'>
+        <Link to='/about'>
           <Cell
-            before={<Image src={tonSvg} style={{ backgroundColor: '#007AFF' }}/>}
-            subtitle='Connect your TON wallet'
+            subtitle=''
           >
-            TON Connect
-          </Cell>
-        </Link>
-        <Link to='/goods'>
-          <Cell
-            before={<Image src={iconBot} style={{ backgroundColor: '#007AFF' }}/>}
-            subtitle='5 товаров'
-          >
-            Товары за опыт
+              <Card type="plain">
+                  <Fragment key=".0">
+                      <CardChip readOnly>
+                          Купить
+                      </CardChip>
+                      <img
+                          alt="book"
+                          src="https://www.company.rt.ru/social/cyberknowledge/book_cybersecurity/SMakarov_book_TitlePage_250.png"
+                          style={{
+                              display: 'block',
+                              height: 308,
+                              objectFit: 'cover',
+                              width: 254
+                          }}
+                      />
+                      <CardCell
+                          readOnly
+                          subtitle="Кибербезопасность"
+                      >
+                          Книга
+                      </CardCell>
+                  </Fragment>
+              </Card>
+
           </Cell>
         </Link>
       </Section>
