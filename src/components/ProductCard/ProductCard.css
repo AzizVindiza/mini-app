@@ -10,7 +10,9 @@
     }
 
     width: 30%;
-
+    .ProductCard__img{
+        width: 100%;
+    }
     .ProductCard__btn {
         color: var(--tg-theme-button-text-color);
         border: none;
