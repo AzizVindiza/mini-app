@@ -1,0 +1,23 @@
+.ProductCard {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .ProductCard__text {
+        color: var(--tg-theme-subtitle-text-color);
+    }
+
+    width: 30%;
+
+    .ProductCard__btn {
+        color: var(--tg-theme-secondary-bg-color);
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 12px;
+        width: 100%;
+        background-color: var(--tg-theme-subtitle-text-color);
+    }
+}
